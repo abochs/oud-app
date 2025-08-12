@@ -5,7 +5,7 @@ import { View, Text, TextInput, Switch, ScrollView } from 'react-native';
 import { listAllDosesAsc, getLatestCows } from '../lib/db';
 import LineChart from '../components/LineChart';
 import YAxisChart from '../components/YAxisChart';
-import { calculateCpSeries, PatientParams } from '../lib/buprenorphinePK';
+import { calculateCpSeriesAdvanced } from '../lib/buprenorphinePK_advanced';
 import { useFocusEffect } from 'expo-router';
 
 const STUDY_ID = 'demo-0001';
@@ -37,12 +37,12 @@ export default function ProgressScreen(){
     // Removed kidney/liver impairment logic for clinical simplicity
       // Generate Cp series from -6 to +24 hours for scrollable graph
       const now = Date.now();
-      const series = calculateCpSeries(
+      const series = calculateCpSeriesAdvanced(
         doses.map(d => ({ amount_mg: d.amount_mg, ts: Date.parse(d.ts) })),
-        patient,
-        now - 24 * 60 * 60 * 1000, // start 24 hours before now
-        48, // 48 hour window (-24 to +24)
-        6 // every 0.1 hr (6 min)
+        { weight_kg: 70, hepatic: "none", cyp3a: "none", formulation: "film" },
+        now - 24 * 60 * 60 * 1000,
+        48,
+        6
       );
       console.log("Graph points for LineChart:", series);
       setSeries(series);
