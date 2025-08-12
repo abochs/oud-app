@@ -81,7 +81,7 @@ export default function DoseScreen() {
 
       {/* Custom Add Section */}
       <View style={{backgroundColor:'#f8fafc', borderRadius:16, padding:16, marginBottom:18, shadowColor:'#000', shadowOpacity:0.06, shadowRadius:8, elevation:2, flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
-        <Text style={{fontSize:14, fontWeight:'500', color:'#64748B', letterSpacing:0.2}}>Custom Add Dose</Text>
+  <Text style={{fontSize:14, fontWeight:'500', color:'#64748B', letterSpacing:0.2}}>Add Custom Dose</Text>
         <TouchableOpacity
           style={{backgroundColor:'#e0f2f1', borderRadius:20, width:36, height:36, alignItems:'center', justifyContent:'center'}}
           onPress={openCustomModal}
