@@ -138,4 +138,4 @@ export default function LineChart({ data }: { data: Point[] | undefined }) {
       />
     </VictoryChart>
   );
-}
+  }
