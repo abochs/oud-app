@@ -31,9 +31,10 @@ export default function Layout() {
         headerStyle: { backgroundColor: headerBg },
         headerTitleStyle: {
           color: text,
-          fontSize: 14,
-          fontWeight: "600",
+          fontSize: 16,
+          fontWeight: "700",
           letterSpacing: 0.2,
+          marginVertical: 4,
         },
         headerShadowVisible: true,
         headerTintColor: tint,
@@ -43,14 +44,16 @@ export default function Layout() {
         tabBarStyle: {
           backgroundColor: bg,
           borderTopColor: border,
-          height: 60,
-          paddingBottom: Platform.select({ ios: 10, android: 8 }),
-          paddingTop: 6,
+          height: 48,
+          paddingBottom: Platform.select({ ios: 32, android: 28 }),
+          paddingTop: 0,
         },
         tabBarLabelStyle: {
           fontSize: 10,
           fontWeight: "600",
           letterSpacing: 0.2,
+          paddingBottom: 36,
+          paddingTop: 0,
         },
       }}
     >
@@ -71,7 +74,7 @@ export default function Layout() {
           tabBarIcon: ({ color }) => (
             <Ionicons name="pulse-outline" size={20} color={color} />
           ),
-          headerTitle: "Withdrawal Check (COWS)",
+          headerTitle: "Withdrawal Check",
         }}
       />
       <Tabs.Screen
