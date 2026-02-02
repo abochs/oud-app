@@ -1,7 +1,16 @@
 // lib/cows.ts
 export const COWS_ITEMS = [
-  'pulse','sweating','restlessness','pupils','aches','rhinorrhea_lacrimation',
-  'gi_upset','tremor','yawning','anxiety_irritability','gooseflesh'
+  'Anxiety / Irritability',
+  'Restlessness',
+  'Stomach Ache',
+  'Aches',
+  'Yawning',
+  'Goosebumps',
+  'Sweating',
+  'Tremor / Shakiness',
+  'Runny Nose / Teary Eyes',
+  'Pinpoint Pupils',
+  'Heart Rate'
 ] as const;
 
 export type CowsItemKey = typeof COWS_ITEMS[number];

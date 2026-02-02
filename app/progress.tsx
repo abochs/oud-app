@@ -54,30 +54,7 @@ export default function ProgressScreen() {
 
   return (
     <View style={{ padding: 16 }}>
-      <Text style={{ fontSize: 20, fontWeight: '600', marginBottom: 8 }}>
-        Amount in system (ng/mL)
-      </Text>
-      <View style={{ marginBottom: 16 }}>
-        <Text style={{ fontWeight: '600' }}>Patient Parameters</Text>
-        <View style={{ marginTop: 8 }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
-            <Text>Weight (kg): </Text>
-            <TextInput
-              style={{
-                borderWidth: 1,
-                borderColor: '#ccc',
-                borderRadius: 6,
-                padding: 4,
-                width: 60,
-                marginRight: 12
-              }}
-              keyboardType="numeric"
-              value={weight}
-              onChangeText={setWeight}
-            />
-          </View>
-        </View>
-      </View>
+      <View style={{ marginBottom: 8 }} />
       <View style={{ marginVertical: 16 }}>
         <ScrollView
           horizontal
